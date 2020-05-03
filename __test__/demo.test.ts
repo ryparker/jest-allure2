@@ -47,10 +47,9 @@ describe('Testing examples', () => {
     allure.severity('Minor')
 
     const a = { a: { b: { c: 5 } } }
-    const b = { a: { b: { c: 8 } } }
 
     allure.step('Expect objects to match', () => {
-      return expect(a).toBe(b)
+      expect(a).toBe(a)
     })
   })
 })

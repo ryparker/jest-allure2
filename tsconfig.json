@@ -12,7 +12,10 @@
     "types": ["jasmine", "node", "jest"],
     "skipLibCheck": true,
     "outDir": "./dist",
-    "rootDir": "./"
+    "rootDir": "./",
+    "noImplicitAny": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
   },
   "exclude": ["node_modules"],
   "compileOnSave": false,
