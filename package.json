@@ -1,33 +1,31 @@
 {
-  "name": "jest-allure",
-  "version": "0.1.1",
+  "name": "jest-allure2",
+  "version": "1.0.0",
   "description": "Allure Reports for jest",
-  "main": "dist/index",
-  "repository": "git@github.com:zaqqaz/jest-allure.git",
-  "author": "Denis Artyuhovich (zaqqaz) <i@denis.by>",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "author": "Ryan Parker",
   "license": "MIT",
   "scripts": {
-    "prepublish": "npm run build",
-    "build": "tsc"
+    "build": "tsc",
+    "test": "jest --config ./__test__/jest.config.js"
   },
   "keywords": [
     "jest",
     "report",
     "reports",
     "allure",
-    "e2e",
-    "tests",
-    "screenshots"
+    "tests"
   ],
   "devDependencies": {
-    "typescript": "^2.8.3"
+    "@types/allure-js-commons": "^0.0.1",
+    "@types/jasmine": "^3.3.12",
+    "@types/jest": "^25.2.1",
+    "jest": "^25.5.4",
+    "typescript": "^3.8.3"
   },
   "dependencies": {
-    "@types/allure-js-commons": "^0.0.0",
-    "@types/jest": "^22.2.3",
-    "@types/node": "^10.1.2",
-    "@types/strip-ansi": "^3.0.0",
-    "allure-js-commons": "^1.3.2",
-    "strip-ansi": "^4.0.0"
+    "allure-jasmine": "^2.0.0-beta.6",
+    "allure-js-commons": "^2.0.0-beta.6"
   }
 }

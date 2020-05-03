@@ -1,16 +1,20 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "declaration": true,
-    "suppressImplicitAnyIndexErrors": false,
-    "baseUrl": "./",
-    "paths": {
-       "jest-allure/*": ["./*"]
-    },
-    "target": "es6",
-    "outDir": "dist",
+    "target": "es2017",
+    "lib": ["es2017"],
     "module": "commonjs",
+    "moduleResolution": "node",
+    "declaration": true,
+    "strict": true,
+    "sourceMap": true,
     "esModuleInterop": true,
-    "typeRoots": ["node_modules/@types"]
-  }
+    "removeComments": true,
+    "types": ["jasmine", "node", "jest"],
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "rootDir": "./"
+  },
+  "exclude": ["node_modules"],
+  "compileOnSave": false,
+  "include": ["./src", "./__test__"]
 }
