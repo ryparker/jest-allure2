@@ -50,7 +50,7 @@ describe('Testing examples', () => {
     const b = { a: { b: { c: 8 } } }
 
     allure.step('Expect objects to match', () => {
-      return expect(a).toMatchObject(b)
+      return expect(a).toBe(b)
     })
   })
 })
