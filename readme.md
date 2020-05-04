@@ -27,10 +27,12 @@ information from everyday execution of tests.
 yarn add -D jest-allure2
 ```
 
-2. Update `jest.config.js`
+2. Update `jest.setup.js`
 
-```json
-setupFilesAfterEnv: ["jest-allure2"]
+```js
+var {registerAllure} = require('jest-allure2')
+
+registerAllure()
 ```
 
 3. Run tests
@@ -110,4 +112,27 @@ describe("Number functions", () => {
     });
 });
 
+```
+
+## :gear: Options
+
+The main export `registerAllure()` accepts three optional configuration arguments:
+
+| Parameter       | Description                                                                         | Default            |
+| --------------- | ----------------------------------------------------------------------------------- | ------------------ |
+| resultsDir      | File path where result files are written.                                           | `"allure-results"` |
+| environmentInfo | Key value pairs that will appear under the environment section of the Allure report | `{}`               |
+| testMapper      | Decorator that receives Allure test result objects.                                 | `undefined`        |
+
+```js
+var resultsDir = 'allure-results'
+var environmentInfo = {"Username": "User-1331", "password": "password-1331"}
+var testMapper = results => {
+    if (result.status == Status.SKIPPED) {
+        result.fullName = `(WAS SKIPPED) ${result.fullName}`
+    }
+    return result
+}
+
+registerAllure(resultsDir, environmentInfo, testMapper)
 ```
