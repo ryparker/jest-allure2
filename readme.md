@@ -125,6 +125,7 @@ The main export `registerAllure()` accepts three optional configuration argument
 | testMapper      | Decorator that receives Allure test result objects.                                 | `undefined`        |
 
 ```js
+// jest.setup.js
 var resultsDir = 'allure-results'
 var environmentInfo = {"Username": "User-1331", "password": "password-1331"}
 var testMapper = results => {
