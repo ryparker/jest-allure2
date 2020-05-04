@@ -2,29 +2,29 @@ import { JasmineAllureReporter } from 'allure-jasmine'
 import { Allure, TestResult } from 'allure-js-commons'
 
 declare global {
-  const allure: Allure
+	const allure: Allure
 }
 
 const registerAllure = (
-  resultsDir = 'allure-results',
-  environmentInfo = {},
-  testMapper?: ((test: TestResult) => TestResult | null) | undefined,
+	resultsDir = 'allure-results',
+	environmentInfo = {},
+	testMapper?: ((test: TestResult) => TestResult | null) | undefined,
 ) => {
-  const reporter = new JasmineAllureReporter({
-    resultsDir,
-    testMapper,
-  })
+	const reporter = new JasmineAllureReporter({
+		resultsDir,
+		testMapper,
+	})
 
-  jasmine.getEnv().addReporter(reporter)
+	jasmine.getEnv().addReporter(reporter)
 
-  const allure = reporter.getInterface()
-  global.allure = allure
+	const allure = reporter.getInterface()
+	global.allure = allure
 
-  if (environmentInfo) {
-    allure.writeEnvironmentInfo(environmentInfo)
-  }
+	if (environmentInfo) {
+		allure.writeEnvironmentInfo(environmentInfo)
+	}
 
-  return reporter
+	return reporter
 }
 
 export { registerAllure }
