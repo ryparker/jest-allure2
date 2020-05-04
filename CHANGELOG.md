@@ -1,4 +1,4 @@
-# [0.0.0-development](https://github.com/ryparker/jest-allure/compare/v1.0.5...v0.0.0-development) (2020-05-04)
+# [1.1.0](https://github.com/ryparker/jest-allure/compare/v1.0.5...v1.1.0) (2020-05-04)
 
 
 
