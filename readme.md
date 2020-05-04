@@ -1,17 +1,28 @@
 # Jest-Allure2
 
+An up to date Jest reporter that produces Allure 2 reports.
+
+[![NPM](https://nodei.co/npm/jest-allure2.png)](https://nodei.co/npm/jest-allure2/)
 ![Continuous Integration](https://github.com/ryparker/jest-allure2/workflows/Continuous%20Integration/badge.svg)
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/jest-community/awesome-jest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ![Allure Report](https://user-images.githubusercontent.com/2823336/40350093-59cad576-5db1-11e8-8210-c4db3bf825a1.png)
 
-Jest reporter that produces descriptive Allure reports. Forked from [jest-allure](https://github.com/zaqqaz/jest-allure), this project uses the latest allure configuration `^2.0.0-beta.6`. This enables support for new attachment types that were not supported on previous version. Allure result files are now JSON, replacing v1's XML format. A global `allure` object is available to enable full use of Allure's feature set.
+ Originally forked from [jest-allure](https://github.com/zaqqaz/jest-allure), this project uses the latest allure configuration `^2.0.0-beta.6`.
 
 [Allure Framework](https://github.com/allure-framework/allure2) is a flexible lightweight multi-language test report tool that not only
 shows a very concise representation of what have been tested in a neat web report form,
 but allows everyone participating in the development process to extract maximum of useful
 information from everyday execution of tests.
+
+**Features:**
+
+- Most robust Allure API currently available to Jest.
+
+- Support for new attachment types that were not supported on previous versions.
+
+- Allure result files are now JSON, replacing the legacy XML format.
 
 ## Requirements
 
