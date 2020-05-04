@@ -1,55 +1,35 @@
-describe('suite with story', () => {
-  beforeEach(() => {
-    allure.feature('feature-name')
-    allure.story('story-name')
-  })
+import { Severity } from 'allure-js-commons'
 
-  test('a test will be marked as a feature', () => {
-    expect(1).toBe(1)
-  })
-
-  test('will be marked too', () => {
-    expect(2).toBe(2)
-  })
-})
-
-function sum(a: number, b: number): number {
-  return a + b
+const Feature = {
+	BILLING: 'billing',
 }
 
-describe('Testing examples', () => {
-  test('Allure reporter annotations', () => {
-    allure.epic('Unit Tests')
-    allure.feature('Initial App Load')
-    allure.story('Sagas')
-    allure.severity('Critical')
-    allure.owner('Blue Squad')
-    allure.issue(
-      'AWS-60',
-      'https://globalvetlink.atlassian.net/browse/AWS-60?atlOrigin=eyJpIjoiNDYxNzM5NGQ3YzE1NDk3YjliZmFiNGZjOGNmZjUwOTEiLCJwIjoiaiJ9'
-    )
-    allure.tag('myTag')
-    allure.description(
-      'Pulvinar natoque cras dapibus ultrices sit egestas laoreet molestie fames, amet dictum placerat fringilla feugiat porttitor in dis, potenti at iaculis dignissim etiam a litora tellus. Etiam iaculis sapien magna suscipit, eros pellentesque. Euismod condimentum laoreet elementum venenatis pharetra tellus curabitur amet, class ultrices morbi sodales vestibulum facilisi consectetur volutpat, erat mattis potenti faucibus cum est nam.'
-    )
-    allure.parameter('a', '1')
-    allure.parameter('b', '2')
+function sum(a: number, b: number): number {
+	return a + b
+}
 
-    allure.step('Expect sum to be 3', () => {
-      return expect(sum(1, 2)).toBe(3)
-    })
-  })
+describe('README Examples', () => {
+	beforeEach(() => {
+		allure.severity(Severity.CRITICAL)
+		allure.feature(Feature.BILLING)
+		allure.story('BILL-217')
+		allure.owner('Blue Squad')
+		allure.tag('Sprint-2/22/2020')
+	})
 
-  test('Compares two objects using jest-diff', () => {
-    allure.epic('Unit Tests')
-    allure.feature('Initial App Load')
-    allure.story('Sagas')
-    allure.severity('Minor')
+	test('sum performs addition functionality', () => {
+		allure.description('Tests should be ran when billing functionality is changed.')
 
-    const a = { a: { b: { c: 5 } } }
+		allure.step('Two integers can be added together.', () => {
+			allure.parameter('a', '3')
+			allure.parameter('b', '4')
+			expect(sum(3, 4)).toBe(7)
+		})
 
-    allure.step('Expect objects to match', () => {
-      expect(a).toBe(a)
-    })
-  })
+		allure.step('Two floats can be added together', () => {
+			allure.parameter('a', ' 3.141')
+			allure.parameter('b', '2.571')
+			expect(sum(3.141, 2.571)).toBe(5.712)
+		})
+	})
 })
