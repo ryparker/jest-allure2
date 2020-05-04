@@ -3,7 +3,9 @@
 An up to date Jest reporter that produces Allure 2 reports.
 
 [![NPM](https://nodei.co/npm/jest-allure2.png)](https://nodei.co/npm/jest-allure2/)
+
 ![Continuous Integration](https://github.com/ryparker/jest-allure2/workflows/Continuous%20Integration/badge.svg)
+![Continuous Deployment](https://github.com/ryparker/jest-allure2/workflows/Continuous%20Deployment/badge.svg)
 [![Known Vulnerabilities](https://snyk.io/test/github/ryparker/jest-allure2/badge.svg?targetFile=package.json)](https://snyk.io/test/github/ryparker/jest-allure2?targetFile=package.json)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
