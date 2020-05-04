@@ -1,6 +1,11 @@
 import { JasmineAllureReporter } from 'allure-jasmine'
 import { Allure, TestResult } from 'allure-js-commons'
 
+export interface Global extends NodeJS.Global {
+	allure: Allure
+}
+
+declare const global: Global
 declare global {
 	const allure: Allure
 }

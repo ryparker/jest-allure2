@@ -1,23 +1,24 @@
 {
-  "compilerOptions": {
-    "target": "es2017",
-    "lib": ["es2017"],
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "declaration": true,
-    "strict": true,
-    "sourceMap": true,
-    "esModuleInterop": true,
-    "removeComments": true,
-    "types": ["jasmine", "node", "jest"],
-    "skipLibCheck": true,
-    "outDir": "./dist",
-    "rootDir": "./",
-    "noImplicitAny": false,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
-  },
-  "exclude": ["node_modules"],
-  "compileOnSave": false,
-  "include": ["./src", "./__test__"]
+	"compilerOptions": {
+		"target": "es2017",
+		"lib": ["es2017"],
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"declaration": true,
+		"strict": true,
+		"sourceMap": true,
+		"esModuleInterop": true,
+		"removeComments": true,
+		"types": ["jasmine", "node", "jest", "allure-js-commons"],
+		"typeRoots": ["./node_modules/@types", "./dist/src"],
+		"skipLibCheck": true,
+		"outDir": "./dist",
+		"rootDir": "./",
+		"noImplicitAny": false,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true
+	},
+	"exclude": ["node_modules"],
+	"compileOnSave": false,
+	"include": ["./src", "./__test__"]
 }
