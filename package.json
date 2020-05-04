@@ -1,6 +1,6 @@
 {
   "name": "jest-allure2",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Allure Reports for jest",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
@@ -20,6 +20,7 @@
     "tests"
   ],
   "devDependencies": {
+    "@jedmao/semantic-release-npm-github-config": "^1.0.9",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
     "@types/allure-js-commons": "^0.0.1",
@@ -33,8 +34,7 @@
     "prettier": "^2.0.5",
     "semantic-release": "^17.0.7",
     "typescript": "^3.8.3",
-    "xo": "^0.30.0",
-    "@jedmao/semantic-release-npm-github-config": "^1.0.9"
+    "xo": "^0.30.0"
   },
   "dependencies": {
     "allure-jasmine": "^2.0.0-beta.6",
