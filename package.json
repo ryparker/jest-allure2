@@ -10,7 +10,8 @@
     "build": "tsc",
     "test": "jest --config ./__test__/jest.config.js",
     "lint": "xo ./src && prettier ./src --list-different",
-    "fix": "xo ./src --fix && prettier ./src --write"
+    "fix": "xo ./src --fix && prettier ./src --write",
+    "commit": "git-cz"
   },
   "keywords": [
     "jest",
