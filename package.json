@@ -1,6 +1,6 @@
 {
   "name": "jest-allure2",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Allure Reports for jest",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
@@ -8,7 +8,8 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "test": "jest --config ./__test__/jest.config.js"
+    "test": "jest --config ./__test__/jest.config.js",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
   },
   "keywords": [
     "jest",
@@ -21,6 +22,7 @@
     "@types/allure-js-commons": "^0.0.1",
     "@types/jasmine": "^3.3.12",
     "@types/jest": "^25.2.1",
+    "conventional-changelog-cli": "^2.0.31",
     "jest": "^25.5.4",
     "typescript": "^3.8.3"
   },
