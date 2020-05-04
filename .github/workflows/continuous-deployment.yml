@@ -16,6 +16,8 @@ jobs:
         with:
           node-version: 13.x
       - run: yarn install
+      - name: Lint
+        run: yarn lint
       - name: Build
         run: yarn build
       - name: Test

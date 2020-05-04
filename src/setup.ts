@@ -8,17 +8,17 @@ declare global {
 const registerAllure = (
   resultsDir = 'allure-results',
   environmentInfo = {},
-  testMapper?: ((test: TestResult) => TestResult | null) | undefined
+  testMapper?: ((test: TestResult) => TestResult | null) | undefined,
 ) => {
   const reporter = new JasmineAllureReporter({
-    resultsDir: resultsDir,
-    testMapper: testMapper,
+    resultsDir,
+    testMapper,
   })
 
   jasmine.getEnv().addReporter(reporter)
 
   const allure = reporter.getInterface()
-  global['allure'] = allure
+  global.allure = allure
 
   if (environmentInfo) {
     allure.writeEnvironmentInfo(environmentInfo)

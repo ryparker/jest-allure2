@@ -28,5 +28,6 @@ jobs:
         with:
           node-version: 13.x
       - run: yarn install
+      - run: yarn fix
       - run: yarn build
       - run: yarn test
