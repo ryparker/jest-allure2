@@ -1,1 +1,1 @@
-export { allure } from './setup'
+export { registerAllure } from './setup'

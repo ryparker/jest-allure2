@@ -62,6 +62,7 @@ The `global` variable will have a new `allure` object available with the followi
     allure.environment(name: string, value: string): this;
     allure.attachment(name: string, buffer: any, type: string): this;
     allure.label(name: string, value: string): this;
+    allure.tag(name: string): this;
     allure.parameter(name: string, value: string): this;
     allure.issue(id: string): this;
     allure.tms(id: string): this;
