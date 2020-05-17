@@ -32,7 +32,7 @@ information from everyday execution of tests.
 
 | Resource                                                             | Description                                                                                  |
 | -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| [Jest](https://jestjs.io/)                                           | A highly customizable Javascript testing framework.                                          |
+| [Jest](https://jestjs.io/)                                           | A delightful JavaScript testing framework.                                                   |
 | [Allure 2 CLI](https://github.com/allure-framework/allure2#download) | "A Java jar command line tool that turns Allure result files into beautiful Allure reports." |
 
 ## :rocket: Quick start
