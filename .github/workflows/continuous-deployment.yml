@@ -11,10 +11,10 @@ jobs:
       CI: true
     steps:
       - uses: actions/checkout@v2
-      - name: Setup Node 13.x
+      - name: Setup Node 14.x
         uses: actions/setup-node@v1
         with:
-          node-version: 13.x
+          node-version: 14.x
       - run: yarn install
       - name: Lint
         run: yarn lint
@@ -31,10 +31,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Setup Node 13.x
+      - name: Setup Node 14.x
         uses: actions/setup-node@v1
         with:
-          node-version: '13.x'
+          node-version: '14.x'
       - run: yarn install --ignore-engines
       - name: Build
         run: yarn build
