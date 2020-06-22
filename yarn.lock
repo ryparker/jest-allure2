@@ -1221,13 +1221,13 @@ allure-jasmine@^2.0.0-beta.6:
     allure-js-commons "^2.0.0-beta.6"
 
 allure-js-commons@^2.0.0-beta.6:
-  version "2.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/allure-js-commons/-/allure-js-commons-2.0.0-beta.6.tgz#43da136e6bd073015b77da4e049dd42a37c3f88f"
-  integrity sha512-CcGB65Zrpyl74vZY55rBA5ofmTDDZrSM9kwMdYtqbYgqmPZuvAlVxWWXWrFpZuWpkdgrXYFgVIEv/wCm9+U46w==
+  version "2.0.0-beta.7"
+  resolved "https://registry.yarnpkg.com/allure-js-commons/-/allure-js-commons-2.0.0-beta.7.tgz#1a81ca53a67df5d0ad5a26b161bfcd8094c03c82"
+  integrity sha512-mTHr1RntyvxXXaqdj94DqtanVUozKXQVNOhuKwqOvbPHKRUd6DIeW0WjPXCTag4NE/jx/FO/MVPErYutbGwOUA==
   dependencies:
     mkdirp "^0.5.1"
     properties "^1.2.1"
-    uuid "^3.3.2"
+    uuid "^7.0.2"
 
 ansi-align@^2.0.0:
   version "2.0.0"
@@ -9379,7 +9379,7 @@ uuid@^3.3.2, uuid@^3.3.3:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
-uuid@^7.0.3:
+uuid@^7.0.2, uuid@^7.0.3:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-7.0.3.tgz#c5c9f2c8cf25dc0a372c4df1441c41f5bd0c680b"
   integrity sha512-DPSke0pXhTZgoF/d+WSt2QaKMCFSfx7QegxEWT+JOuHF5aWrKEn0G+ztjuJg/gG8/ItK+rbPCD/yNv8yyih6Cg==
