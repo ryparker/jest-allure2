@@ -1,4 +1,4 @@
-import { JasmineAllureInterface, JasmineAllureReporter } from 'allure-jasmine'
+import { JasmineAllureInterface, JasmineAllureReporter } from './reporter'
 
 import { TestResult } from 'allure-js-commons'
 
@@ -18,7 +18,6 @@ const registerAllure = (
 	testMapper?: ((test: TestResult) => TestResult | null) | undefined,
 ) => {
 
-	console.log(projectDir)
 	const reporter = new JasmineAllureReporter({
 		resultsDir,
 		testMapper,
