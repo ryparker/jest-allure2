@@ -2,8 +2,8 @@
   "name": "jest-allure2",
   "version": "1.1.1",
   "description": "Allure Reports for jest",
-  "main": "dist/src/index.js",
-  "types": "dist/src/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": "Ryan Parker",
   "license": "MIT",
   "scripts": {
