@@ -1,23 +1,28 @@
-import { JasmineAllureReporter } from 'allure-jasmine'
-import { Allure, TestResult } from 'allure-js-commons'
+import { JasmineAllureInterface, JasmineAllureReporter } from 'allure-jasmine'
+
+import { TestResult } from 'allure-js-commons'
 
 export interface Global extends NodeJS.Global {
-	allure: Allure
+	allure: JasmineAllureInterface
 }
 
 declare const global: Global
 declare global {
-	const allure: Allure
+	const allure: JasmineAllureInterface
 }
 
 const registerAllure = (
 	resultsDir = 'allure-results',
+	projectDir = process.cwd(),
 	environmentInfo = {},
 	testMapper?: ((test: TestResult) => TestResult | null) | undefined,
 ) => {
+
+	console.log(projectDir)
 	const reporter = new JasmineAllureReporter({
 		resultsDir,
 		testMapper,
+		projectDir,
 	})
 
 	jasmine.getEnv().addReporter(reporter)
