@@ -9,8 +9,9 @@
   "scripts": {
     "build": "tsc",
     "test": "jest --config ./__test__/jest.config.js",
-    "lint": "xo ./src && prettier ./src --list-different",
-    "fix": "xo ./src --fix && prettier ./src --write"
+    "lint": "xo src/",
+    "fix": "xo src/ --fix",
+    "clean": "rimraf ./dist"
   },
   "dependencies": {
     "allure-jasmine": "^2.0.0-beta.6",
@@ -43,7 +44,9 @@
     "code": 120,
     "prettier": true,
     "rules": {
-      "@typescript-eslint/prefer-readonly-parameter-types": 0
+      "@typescript-eslint/prefer-readonly-parameter-types": 0,
+      "no-eval": 0,
+      "@typescript-eslint/no-unused-vars": 0
     }
   },
   "config": {

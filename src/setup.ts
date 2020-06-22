@@ -17,7 +17,6 @@ const registerAllure = (
 	environmentInfo = {},
 	testMapper?: ((test: TestResult) => TestResult | null) | undefined,
 ) => {
-
 	const reporter = new JasmineAllureReporter({
 		resultsDir,
 		testMapper,

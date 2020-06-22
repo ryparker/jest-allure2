@@ -1,3 +1,3 @@
-const { registerAllure } = require('../dist/src/index')
+const { registerAllure } = require('../dist/src')
 
 registerAllure()
