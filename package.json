@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "test": "jest --config ./__test__/jest.config.js",
+    "test": "yarn clean && yarn build && jest --config ./__tests__/jest.config.js",
     "lint": "xo src/",
     "fix": "xo src/ --fix",
     "clean": "rimraf ./dist"
@@ -24,6 +24,7 @@
     "@types/jest": "^26.0.0",
     "commitizen": "^4.1.2",
     "cz-conventional-changelog": "3.2.0",
+    "eslint-plugin-jest": "^23.16.0",
     "eslint-plugin-prettier": "^3.1.4",
     "jest": "^26.0.1",
     "prettier": "^2.0.5",
@@ -36,6 +37,9 @@
     "url": "https://github.com/ryparker/jest-allure2.git"
   },
   "xo": {
+    "extends": [
+      "plugin:jest/recommended"
+    ],
     "globals": [
       "jasmine",
       "allure"

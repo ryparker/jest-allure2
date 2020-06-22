@@ -1,10 +1,11 @@
-import { Severity } from 'allure-js-commons'
+// @ts-nocheck
+const { Severity } = require('allure-js-commons')
 
 const Feature = {
 	BILLING: 'billing',
 }
 
-function sum(a: number, b: number): number {
+function sum(a, b) {
 	return a + b
 }
 
