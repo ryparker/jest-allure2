@@ -50,7 +50,7 @@ export class JasmineAllureReporter implements jasmine.CustomReporter {
 	private readonly labelStack: Label[][] = [[]]
 	private runningTest: AllureTest | null = null
 	private stepStack: AllureStep[] = []
-	private isSuite = false
+	private readonly isSuite = false
 
 	private readonly runtime: AllureRuntime
 
@@ -87,17 +87,17 @@ export class JasmineAllureReporter implements jasmine.CustomReporter {
 		console.log(`Jest Worker #${process.env.JEST_WORKER_ID} has started.`)
 	}
 
-	suiteStarted(suite: jasmine.CustomReporterResult): void {
-		// SuiteStarted is only triggered when a test is nested in a describe block
-		this.isSuite = true
+	// SuiteStarted(suite: jasmine.CustomReporterResult): void {
+	// 	// SuiteStarted is only triggered when a test is nested in a describe block
+	// 	this.isSuite = true
 
-		// Group all specs of describe block together using wrapper.
-		const name = suite.description
-		const group = (this.getCurrentGroup() || this.runtime).startGroup(name)
+	// 	// Group all specs of describe block together using wrapper.
+	// 	const name = suite.description
+	// 	const group = (this.getCurrentGroup() || this.runtime).startGroup(name)
 
-		this.groupStack.push(group)
-		this.labelStack.push([])
-	}
+	// 	this.groupStack.push(group)
+	// 	this.labelStack.push([])
+	// }
 
 	specStarted(spec: jasmine.CustomReporterResult): void {
 		let specPathArray = []
@@ -267,19 +267,19 @@ export class JasmineAllureReporter implements jasmine.CustomReporter {
 		}
 	}
 
-	suiteDone(_suite: jasmine.CustomReporterResult): void {
-		if (!this.isSuite) console.error('Allure reporter issue: suiteDone called without suiteStart context.')
+	// SuiteDone(_suite: jasmine.CustomReporterResult): void {
+	// 	if (!this.isSuite) console.error('Allure reporter issue: suiteDone called without suiteStart context.')
 
-		if (this.runningTest !== null) console.error('Allure reporter issue: A test was running on suiteDone.')
+	// 	if (this.runningTest !== null) console.error('Allure reporter issue: A test was running on suiteDone.')
 
-		const currentGroup = this.getCurrentGroup()
+	// 	const currentGroup = this.getCurrentGroup()
 
-		if (currentGroup === null) throw new Error('No active suite.')
+	// 	if (currentGroup === null) throw new Error('No active suite.')
 
-		currentGroup.endGroup()
-		this.groupStack.pop()
-		this.labelStack.pop()
-	}
+	// 	currentGroup.endGroup()
+	// 	this.groupStack.pop()
+	// 	this.labelStack.pop()
+	// }
 
 	jasmineDone(_runDetails: jasmine.RunDetails): void {
 		console.log(`Jest Worker #${process.env.JEST_WORKER_ID} has finished.`)
@@ -442,6 +442,8 @@ export class JasmineAllureInterface extends Allure {
 	}
 
 	public logStep(name: string, status: Status, attachments?: [Attachment]): void {
+		console.log('JasmineAllureInterface status:', status)
+
 		const wrappedStep = this.startStep(name)
 
 		if (attachments) {
@@ -509,6 +511,7 @@ class WrappedStep {
 	}
 
 	logStep(status: Status): void {
+		console.log('WrappedStep status:', status)
 		// Return this.step.logStep(status);
 	}
 

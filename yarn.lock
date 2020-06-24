@@ -1062,14 +1062,7 @@ ajv@^6.10.0, ajv@^6.10.2, ajv@^6.5.5:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-allure-jasmine@^2.0.0-beta.6:
-  version "2.0.0-beta.7"
-  resolved "https://registry.yarnpkg.com/allure-jasmine/-/allure-jasmine-2.0.0-beta.7.tgz#92c8054e9479e99e6e2bf3ca1b1890bf75f7d426"
-  integrity sha512-G7p6PMTh3WIFIdaFZH6ouH7DcJMC8fwBikZN1T1E9cIoAoUWRXrfSPpgAk1+S4782ZvhmRH+QSaJMxBU/IU4bA==
-  dependencies:
-    allure-js-commons "^2.0.0-beta.7"
-
-allure-js-commons@^2.0.0-beta.6, allure-js-commons@^2.0.0-beta.7:
+allure-js-commons@2.0.0-beta.7:
   version "2.0.0-beta.7"
   resolved "https://registry.yarnpkg.com/allure-js-commons/-/allure-js-commons-2.0.0-beta.7.tgz#1a81ca53a67df5d0ad5a26b161bfcd8094c03c82"
   integrity sha512-mTHr1RntyvxXXaqdj94DqtanVUozKXQVNOhuKwqOvbPHKRUd6DIeW0WjPXCTag4NE/jx/FO/MVPErYutbGwOUA==

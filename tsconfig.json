@@ -17,7 +17,7 @@
 		"noFallthroughCasesInSwitch": true,
 		"noImplicitReturns": true,
 		"typeRoots": ["node_modules/@types"],
-		"types": ["jasmine", "node", "jest", "allure-js-commons"],
+		"types": ["node", "jest", "jasmine", "allure-js-commons"],
 		"forceConsistentCasingInFileNames": true,
 		"esModuleInterop": true,
 		"skipLibCheck": true
