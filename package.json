@@ -1,42 +1,32 @@
 {
   "name": "jest-allure2",
-  "version": "1.1.1",
-  "description": "Allure Reports for jest",
+  "version": "1.1.2",
+  "description": "Allure 2 Reports for jest",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryparker/jest-allure2.git"
+  },
   "files": [
-    "dist/**/*"
+    "dist"
   ],
-  "main": "dist/index.js",
+  "main": "dist",
   "types": "dist/index.d.ts",
   "author": "Ryan Parker",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
-    "test": "yarn clean && yarn build && jest --config ./__tests__/jest.config.js",
-    "lint": "xo src/",
-    "fix": "xo src/ --fix",
-    "clean": "rimraf ./dist"
+    "build": "rimraf dist && tsc",
+    "test": "yarn clean && yarn build && jest",
+    "lint": "xo src",
+    "fix": "xo src --fix",
+    "clean": "rimraf dist allure-results"
   },
-  "dependencies": {
-    "allure-js-commons": "2.0.0-beta.7",
-    "strip-ansi": "^6.0.0"
-  },
-  "devDependencies": {
-    "@types/allure-js-commons": "^0.0.1",
-    "@types/jasmine": "^3.5.11",
-    "@types/jest": "^26.0.0",
-    "commitizen": "^4.1.2",
-    "cz-conventional-changelog": "3.2.0",
-    "eslint-plugin-jest": "^23.16.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "jest": "^26.0.1",
-    "prettier": "^2.0.5",
-    "semantic-release": "^17.0.8",
-    "typescript": "^3.9.5",
-    "xo": "^0.32.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ryparker/jest-allure2.git"
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./jest.setup.js"
+    ],
+    "testMatch": [
+      "**/__tests__/**"
+    ]
   },
   "xo": {
     "extends": [
@@ -46,17 +36,65 @@
       "jasmine",
       "allure"
     ],
-    "prettier": true,
     "rules": {
+      "promise/prefer-await-to-then": 1,
       "@typescript-eslint/prefer-readonly-parameter-types": 0,
-      "no-eval": 0,
-      "@typescript-eslint/no-unused-vars": 0
+      "@typescript-eslint/no-unused-vars": 0,
+      "no-eval": 0
     }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn test"
+    }
+  },
+  "lint-staged": {
+    "./src/**/*": [
+      "xo src --fix"
+    ]
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ]
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "allure-js-commons": "2.0.0-beta.7",
+    "jasmine": "^3.5.0",
+    "strip-ansi": "^6.0.0"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@types/allure-js-commons": "^0.0.1",
+    "@types/jasmine": "^3.5.11",
+    "@types/jest": "^26.0.5",
+    "@types/node": "^14.0.24",
+    "commitizen": "^4.1.2",
+    "cz-conventional-changelog": "3.2.0",
+    "eslint-config-xo-typescript": "^0.31.0",
+    "eslint-plugin-jest": "^23.18.0",
+    "husky": "^4.2.5",
+    "jest": "^26.1.0",
+    "lint-staged": "^10.2.11",
+    "rimraf": "^3.0.2",
+    "semantic-release": "^17.1.1",
+    "typescript": "^3.9.7",
+    "xo": "^0.32.1"
+  },
+  "engines": {
+    "node": ">= 12.x"
   },
   "keywords": [
     "jest",

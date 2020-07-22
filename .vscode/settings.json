@@ -1,13 +1,16 @@
 {
-	"typescript.implementationsCodeLens.enabled": true,
-	"typescript.referencesCodeLens.enabled": true,
-	"xo.enable": true,
-	"xo.format.enable": true,
-	"editor.defaultFormatter": "samverschueren.linter-xo",
-	"[javascript]": {
-		"editor.defaultFormatter": "samverschueren.linter-xo"
-	},
-	"[typescript]": {
-		"editor.defaultFormatter": "samverschueren.linter-xo"
-	}
+  "xo.enable": true,
+  "xo.format.enable": true,
+  "editor.defaultFormatter": "samverschueren.linter-xo",
+  "[javascript]": {
+    "editor.defaultFormatter": "samverschueren.linter-xo"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "samverschueren.linter-xo"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "importsorter.generalConfiguration.sortOnBeforeSave": true,
+  "cSpell.words": ["docblock"]
 }
