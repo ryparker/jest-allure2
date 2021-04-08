@@ -71,7 +71,7 @@
   },
   "dependencies": {
     "allure-js-commons": "2.0.0-beta.9",
-    "jasmine": "^3.6.1",
+    "jasmine": "^3.7.0",
     "strip-ansi": "^6.0.0"
   },
   "devDependencies": {
